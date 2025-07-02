@@ -1,0 +1,307 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+}
+
+
+header {
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+header p {
+  font-size: 1.3rem;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+
+nav {
+  background-color: #1976d2;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+nav li {
+  margin: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+section img {
+  width: 80%;
+  max-width: 700px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 10px auto;
+  border-radius: 8px;
+}
+
+section h2 {
+  color: #0d47a1;
+  margin-bottom: 10px;
+}
+
+section ul {
+  margin-top: 10px;
+  list-style: inside disc;
+}
+
+section ul li {
+  margin-bottom: 5px;
+}
+
+
+footer {
+  position: relative;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+#data-hora {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+body.dark-mode #data-hora {
+  color: #aaa;
+}
+
+#data-hora::before {
+  content: "🕒 ";
+}
+
+#tipos-ataques h3 {
+  margin-top: 15px;
+  color: #1565c0;
+}
+
+#tipos-ataques ul {
+  list-style: inside circle;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#tipos-ataques ul li {
+  margin-bottom: 5px;
+}
+
+.back-to-top {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.back-to-top a {
+  color: #1976d2;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border: 2px solid #1976d2;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.back-to-top a:hover {
+  background-color: #1976d2;
+  color: #ffffff;
+}
+
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  background: linear-gradient(135deg, #333, #555);
+}
+
+body.dark-mode nav {
+  background-color: #444;
+}
+
+body.dark-mode section {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+
+#toggle-theme {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: 2px solid #ffffffaa;
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+#toggle-theme:hover {
+  background-color: #ffffff33;
+}
+body.dark-mode #toggle-theme {
+  border-color: #333;
+  color: #333;
+}
+body.dark-mode #toggle-theme:hover {
+  background-color: #33333333;
+}
+
+#contato form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+#contato label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #0d47a1;
+}
+
+#contato input[type="text"],
+#contato input[type="email"],
+#contato textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+#contato input:focus,
+#contato textarea:focus {
+  border-color: #1976d2;
+  outline: none;
+}
+
+#contato button[type="submit"] {
+  display: inline-block;
+  background-color: #0d47a1;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#contato button[type="submit"]:hover {
+  background-color: #1976d2;
+}
+
+#mensagem-erro {
+  margin-top: -8px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+
+#contato h2 {
+  font-size: 1.8rem;
+  color: #0d47a1;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+
+body.dark-mode #contato h2 {
+  color: #e0e0e0;
+}
+
+
+body.dark-mode #toggle-theme {
+  border-color: #e0e0e0;
+  color: #e0e0e0;
+}
+
+
+body.dark-mode #toggle-theme:hover {
+  background-color: #ffffff22;
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

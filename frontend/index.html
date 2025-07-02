@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proteja-se Online - Campanha de Conscientização</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="topo">
+      <h1 id="typed"></h1>
+      <p>Campanha de Conscientização sobre Ataques Cibernéticos</p>
+      <button id="toggle-theme">🌙 Alternar Tema</button>
+      <nav>
+        <ul>
+          <li><a href="#o-que-e">O que são ataques cibernéticos?</a></li>
+          <li><a href="#tipos-ataques">Principais Tipos de Ataques Web</a></li>
+          <li><a href="#boas-praticas">Boas Práticas de Segurança</a></li>
+          <li><a href="#recursos">Recursos</a></li>
+          <li><a href="#scan">Escaneie uma URL</a></li>
+          <li><a href="#contato">Fale Conosco</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="o-que-e">
+        <h2>O que são ataques cibernéticos?</h2>
+        <img src="./assets/image.png" alt="Imagem de hacker" />
+        <p>
+          Ataques cibernéticos são ações maliciosas realizadas com o objetivo de
+          comprometer sistemas de informação, redes ou dispositivos eletrônicos.
+          Eles podem causar desde a perda de dados pessoais até graves prejuízos
+          financeiros e danos à reputação de indivíduos ou empresas. Com a
+          crescente digitalização de serviços, tornou-se cada vez mais
+          importante entender como esses ataques acontecem e como se proteger
+          contra eles.
+        </p>
+      </section>
+
+      <section id="tipos-ataques">
+        <h2>Principais Tipos de Ataques em Aplicações Web</h2>
+
+        <h3>1. Injeção de SQL (SQL Injection)</h3>
+        <p>
+          SQL Injection ocorre quando um atacante insere comandos SQL maliciosos
+          em campos de entrada da aplicação, como formulários de login ou busca,
+          para manipular ou acessar ilegalmente o banco de dados.
+        </p>
+        <h4>Como se proteger?</h4>
+        <ul>
+          <li>
+            Utilize <strong>prepared statements</strong> ou consultas
+            parametrizadas para evitar a injeção de código malicioso.
+          </li>
+          <li>
+            Valide e sanitize todas as entradas de usuário antes de utilizá-las
+            em consultas ao banco de dados.
+          </li>
+          <li>
+            Utilize ORMs (Object-Relational Mappers) que gerenciem as interações
+            com o banco de dados de forma segura.
+          </li>
+        </ul>
+
+        <h3>2. Cross-Site Scripting (XSS)</h3>
+        <p>
+          Em um ataque XSS, o criminoso injeta scripts maliciosos em páginas web
+          visualizadas por outros usuários, podendo roubar cookies, sessões ou
+          redirecionar para sites perigosos.
+        </p>
+        <h4>Como se proteger?</h4>
+        <ul>
+          <li>
+            Escape corretamente os dados inseridos em páginas web, especialmente
+            em formulários e campos de comentários.
+          </li>
+          <li>
+            Utilize Content Security Policy (CSP) para limitar as fontes de
+            execução de scripts.
+          </li>
+          <li>
+            Evite o uso direto de entradas de usuários sem tratamento no HTML.
+          </li>
+        </ul>
+
+        <h3>3. Cross-Site Request Forgery (CSRF)</h3>
+        <p>
+          O ataque CSRF força usuários autenticados a executarem ações não
+          intencionais em aplicações web nas quais estão autenticados, como
+          mudanças de senha ou envio de formulários.
+        </p>
+        <h4>Como se proteger?</h4>
+        <ul>
+          <li>
+            Implemente tokens CSRF em todos os formulários e verifique-os no
+            servidor antes de processar requisições.
+          </li>
+          <li>
+            Utilize cabeçalhos HTTP de verificação de origem (como
+            <code>Origin</code> e <code>Referer</code>).
+          </li>
+          <li>
+            Reforce a autenticação para ações sensíveis, exigindo re-login ou
+            autenticação de dois fatores.
+          </li>
+        </ul>
+
+        <h3>4. Quebra de Autenticação</h3>
+        <p>
+          Consiste na exploração de falhas em mecanismos de login, como senhas
+          fracas, sessões inseguras ou má implementação de autenticação,
+          permitindo acesso não autorizado a contas e sistemas.
+        </p>
+        <h4>Como se proteger?</h4>
+        <ul>
+          <li>Implemente autenticação multifator (MFA) sempre que possível.</li>
+          <li>
+            Exija senhas fortes e implemente limites de tentativas de login.
+          </li>
+          <li>
+            Utilize bibliotecas seguras e bem testadas para gerenciar
+            autenticação e sessões.
+          </li>
+        </ul>
+
+        <h3>5. Exposição de Dados Sensíveis</h3>
+        <p>
+          A exposição de dados sensíveis ocorre quando informações
+          confidenciais, como números de cartão de crédito, documentos pessoais
+          ou senhas, são acessadas ou divulgadas sem autorização.
+        </p>
+        <h4>Como se proteger?</h4>
+        <ul>
+          <li>
+            Criptografe todos os dados sensíveis em trânsito (usando HTTPS) e em
+            repouso (com criptografia de banco de dados).
+          </li>
+          <li>
+            Armazene senhas usando algoritmos de hashing seguro, como bcrypt,
+            Argon2 ou PBKDF2.
+          </li>
+          <li>
+            Restrinja o acesso aos dados apenas a usuários ou sistemas
+            estritamente necessários.
+          </li>
+        </ul>
+
+        <h2 id="boas-praticas">Boas Práticas Gerais para Segurança</h2>
+        <ul>
+          <li>
+            Utilize ferramentas de segurança para identificar vulnerabilidades
+            (como scanners de vulnerabilidade).
+          </li>
+          <li>
+            Realize atualizações frequentes de sistemas, bibliotecas e
+            frameworks.
+          </li>
+          <li>
+            Treine os usuários e desenvolvedores para reconhecerem ameaças, como
+            tentativas de phishing e engenharia social.
+          </li>
+          <li>Implemente políticas de backup e recuperação de dados.</li>
+        </ul>
+      </section>
+
+      <section id="recursos">
+        <h2>Recursos Úteis</h2>
+        <p>Acesse mais informações e dicas de segurança nos seguintes sites:</p>
+        <ul>
+          <li>
+            <a href="https://www.cert.br/" target="_blank"
+              >CERT.br - Centro de Estudos, Resposta e Tratamento de Incidentes
+              de Segurança no Brasil</a
+            >
+          </li>
+          <li>
+            <a href="https://cartilha.cert.br/" target="_blank"
+              >Cartilha de Segurança para Internet</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <main>
+        <section id="scan">
+          <h2>Escaneie uma URL</h2>
+          <div class="scan-form">
+            <input
+              id="input-url"
+              type="text"
+              placeholder="Digite a URL para escanear"
+            />
+            <button id="btn-scan">Escanear</button>
+          </div>
+          <div id="scan-container"></div>
+        </section>
+
+        <div class="back-to-top">
+          <a href="#topo">↑ Voltar ao Topo</a>
+        </div>
+      </main>
+    </main>
+
+    <section id="contato">
+      <h2>Fale Conosco</h2>
+      <form id="form-contato">
+        <label for="nome">Nome:</label><br />
+        <input type="text" id="nome" name="nome" required /><br /><br />
+
+        <label for="email">E-mail:</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="mensagem">Mensagem:</label><br />
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea
+        ><br /><br />
+
+        <button type="submit">Enviar</button>
+        <p id="mensagem-erro" style="color: red; display: none">
+          Preencha todos os campos corretamente.
+        </p>
+      </form>
+    </section>
+
+    <footer>
+      <p>© 2025 - Campanha de Conscientização. Proteja suas informações!</p>
+      <p id="data-hora"></p>
+    </footer>
+  </body>
+
+  <script src="js/script.js"></script>
+  <script type="module" src="js/app.js"></script>
+</html>
