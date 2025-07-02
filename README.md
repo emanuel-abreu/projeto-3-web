@@ -123,6 +123,7 @@ Crie um arquivo `.env` dentro da pasta `backend/` com o seguinte conteúdo:
 
 ```env
 URLSCAN_API_KEY=sua_api_key_aqui
+PORT=""
 ```
 
 > ⚠️ Sua chave deve estar **ativa** no painel do [urlscan.io](https://urlscan.io/user/api/)
