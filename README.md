@@ -36,21 +36,6 @@ PROJETO 3/
 
 ## 🏗️ Arquitetura Adotada (MVC Simplificado)
 
-```mermaid
-flowchart TD
-    subgraph Frontend
-      A[View<br/>(scanView.js)] --> B[Controller<br/>(scanController.js)]
-      B --> C[Model JS<br/>(urlscanModel.js)]
-      C -->|fetch POST /api/scan| D[Express Backend]
-    end
-
-    subgraph Backend
-      D --> E[Controller Node<br/>(backend/controllers/scanController.js)]
-      E --> F[Model Node<br/>(backend/models/urlscanModel.js)]
-      F -->|axios POST /api/v1/scan & axios GET /api/v1/result/:uuid| G[urlscan.io API]
-    end
-```
-
 - **Model (Frontend)**: faz chamadas `fetch` ao nosso backend.
 - **Controller (Frontend)**: gerencia envio, polling e tratamento de erros.
 - **View (Frontend)**: monta e atualiza o DOM com resultados.
